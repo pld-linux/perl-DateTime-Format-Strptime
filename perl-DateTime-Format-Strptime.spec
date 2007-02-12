@@ -6,7 +6,7 @@
 %define	pdir	DateTime
 %define	pnam	Format-Strptime
 Summary:	DateTime::Format::Strptime - Parse and format strp and strf time patterns
-Summary(pl):	DateTime::Format::Strptime - analiza i formatowanie wzorców czasu strp i strf
+Summary(pl.UTF-8):   DateTime::Format::Strptime - analiza i formatowanie wzorcÃ³w czasu strp i strf
 Name:		perl-DateTime-Format-Strptime
 Version:	1.0700
 Release:	2
@@ -34,11 +34,11 @@ the reverse of strftime(3), for DateTime. While strftime takes a
 DateTime and a pattern and returns a string, strptime takes a string
 and a pattern and returns the DateTime object associated.
 
-%description -l pl
-Ten modu³ implementuje wiêkszo¶æ strptime(3) - funkcji POSIX bêd±cej
-odwrotn± dla strftime(3), dla DateTime. O ile strftime przyjmuje
-DateTime i wzorzec, a zwraca ³añcuch, to strptime przyjmuje ³añcuch i
-wzorzec, a zwraca powi±zany obiekt DateTime.
+%description -l pl.UTF-8
+Ten moduÅ‚ implementuje wiÄ™kszoÅ›Ä‡ strptime(3) - funkcji POSIX bÄ™dÄ…cej
+odwrotnÄ… dla strftime(3), dla DateTime. O ile strftime przyjmuje
+DateTime i wzorzec, a zwraca Å‚aÅ„cuch, to strptime przyjmuje Å‚aÅ„cuch i
+wzorzec, a zwraca powiÄ…zany obiekt DateTime.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
