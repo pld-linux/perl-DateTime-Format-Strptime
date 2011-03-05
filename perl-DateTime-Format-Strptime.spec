@@ -8,21 +8,23 @@
 Summary:	DateTime::Format::Strptime - Parse and format strp and strf time patterns
 Summary(pl.UTF-8):	DateTime::Format::Strptime - analiza i formatowanie wzorców czasu strp i strf
 Name:		perl-DateTime-Format-Strptime
-Version:	1.0701
+Version:	1.5000
 Release:	1
 # same as perl
-License:	GPL v1+ or Artistic
+License:	Artistic 2.0
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/R/RI/RICKM/DateTime-Format-Strptime-%{version}.tar.gz
-# Source0-md5:	49dd0f2cfc6b6fe44a5bfc981f8285c9
+Source0:	http://www.cpan.org/modules/by-module/DateTime/DROLSKY/DateTime-Format-Strptime-%{version}.tar.gz
+# Source0-md5:	ccd7e8fe4276c258e325e0bbce3f8e74
 URL:		http://search.cpan.org/dist/DateTime-Format-Strptime/
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.31
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-DateTime >= 0.15
-BuildRequires:	perl-DateTime-Locale >= 0.02
-BuildRequires:	perl-DateTime-TimeZone >= 0.25
+BuildRequires:	perl-DateTime >= 1:0.43_04
+BuildRequires:	perl-DateTime-Locale >= 0.45
+BuildRequires:	perl-DateTime-TimeZone >= 0.79
 BuildRequires:	perl-Params-Validate >= 0.64
+BuildRequires:	perl-Test-Simple >= 0.88
 %endif
 Requires:	perl-DateTime >= 0.28-2
 BuildArch:	noarch
@@ -62,5 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorlib}/DateTime/Format/*.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/DateTime/Format/Strptime.pm
+%{_mandir}/man3/DateTime::Format::Strptime.3pm*
