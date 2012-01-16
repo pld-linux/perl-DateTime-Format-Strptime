@@ -9,7 +9,7 @@ Summary:	DateTime::Format::Strptime - Parse and format strp and strf time patter
 Summary(pl.UTF-8):	DateTime::Format::Strptime - analiza i formatowanie wzorców czasu strp i strf
 Name:		perl-DateTime-Format-Strptime
 Version:	1.5000
-Release:	2
+Release:	4
 # same as perl
 License:	Artistic 2.0
 Group:		Development/Languages/Perl
