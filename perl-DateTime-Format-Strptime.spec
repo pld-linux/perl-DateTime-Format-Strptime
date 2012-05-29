@@ -8,19 +8,19 @@
 Summary:	DateTime::Format::Strptime - Parse and format strp and strf time patterns
 Summary(pl.UTF-8):	DateTime::Format::Strptime - analiza i formatowanie wzorców czasu strp i strf
 Name:		perl-DateTime-Format-Strptime
-Version:	1.5000
-Release:	4
+Version:	1.5100
+Release:	1
 # same as perl
 License:	Artistic 2.0
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/DateTime/DROLSKY/DateTime-Format-Strptime-%{version}.tar.gz
-# Source0-md5:	ccd7e8fe4276c258e325e0bbce3f8e74
+Source0:	http://www.cpan.org/modules/by-module/DateTime/DateTime-Format-Strptime-1.51.tar.gz
+# Source0-md5:	c23762383da3511e18ff3b1b03cf936e
 URL:		http://search.cpan.org/dist/DateTime-Format-Strptime/
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.31
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-DateTime >= 1:0.43_04
+BuildRequires:	perl-DateTime >= 1:0.44
 BuildRequires:	perl-DateTime-Locale >= 0.45
 BuildRequires:	perl-DateTime-TimeZone >= 0.79
 BuildRequires:	perl-Params-Validate >= 0.64
@@ -43,7 +43,7 @@ DateTime i wzorzec, a zwraca łańcuch, to strptime przyjmuje łańcuch i
 wzorzec, a zwraca powiązany obiekt DateTime.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-%{version}
+%setup -q -n %{pdir}-%{pnam}-1.51
 
 %build
 %{__perl} Makefile.PL \
