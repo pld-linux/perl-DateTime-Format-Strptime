@@ -8,12 +8,14 @@
 Summary:	DateTime::Format::Strptime - Parse and format strp and strf time patterns
 Summary(pl.UTF-8):	DateTime::Format::Strptime - analiza i formatowanie wzorców czasu strp i strf
 Name:		perl-DateTime-Format-Strptime
-Version:	1.5600
+# fill version to 4 decimal digits to avoid epoch bumps after 1.5000 (drop in >= 2.x if possible)
+%define	rver	1.68
+Version:	%{rver}00
 Release:	1
 License:	Artistic v2.0
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/DateTime/DateTime-Format-Strptime-1.56.tar.gz
-# Source0-md5:	c8c1ca4e56160179e5c67b1d622320e9
+Source0:	http://www.cpan.org/modules/by-module/DateTime/DateTime-Format-Strptime-%{rver}.tar.gz
+# Source0-md5:	50dcc1ff5346848fe1ec928bda07fe44
 URL:		http://search.cpan.org/dist/DateTime-Format-Strptime/
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.31
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -22,8 +24,12 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-DateTime >= 1:1.00
 BuildRequires:	perl-DateTime-Locale >= 0.45
 BuildRequires:	perl-DateTime-TimeZone >= 0.79
-BuildRequires:	perl-Params-Validate >= 0.64
-BuildRequires:	perl-Test-Simple >= 0.88
+BuildRequires:	perl-Package-DeprecationManager >= 0.15
+BuildRequires:	perl-Params-Validate >= 1.20
+BuildRequires:	perl-Test-Fatal
+BuildRequires:	perl-Test-Simple >= 0.96
+BuildRequires:	perl-Test-Warnings
+BuildRequires:	perl-Try-Tiny
 %endif
 Requires:	perl-DateTime >= 1.00
 BuildArch:	noarch
@@ -42,7 +48,7 @@ DateTime i wzorzec, a zwraca łańcuch, to strptime przyjmuje łańcuch i
 wzorzec, a zwraca powiązany obiekt DateTime.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-1.56
+%setup -q -n %{pdir}-%{pnam}-%{rver}
 
 %build
 %{__perl} Makefile.PL \
