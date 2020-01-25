@@ -5,7 +5,6 @@
 
 %define		pdir	DateTime
 %define		pnam	Format-Strptime
-%include	/usr/lib/rpm/macros.perl
 Summary:	DateTime::Format::Strptime - Parse and format strp and strf time patterns
 Summary(pl.UTF-8):	DateTime::Format::Strptime - analiza i formatowanie wzorców czasu strp i strf
 Name:		perl-DateTime-Format-Strptime
