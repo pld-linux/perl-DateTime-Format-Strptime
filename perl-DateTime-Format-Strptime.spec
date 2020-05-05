@@ -9,22 +9,22 @@ Summary:	DateTime::Format::Strptime - Parse and format strp and strf time patter
 Summary(pl.UTF-8):	DateTime::Format::Strptime - analiza i formatowanie wzorców czasu strp i strf
 Name:		perl-DateTime-Format-Strptime
 # fill version to 4 decimal digits to avoid epoch bumps after 1.5000 (drop in >= 2.x if possible)
-%define	rver	1.75
+%define	rver	1.77
 Version:	%{rver}00
 Release:	1
 License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DateTime/DateTime-Format-Strptime-%{rver}.tar.gz
-# Source0-md5:	3f081b0068d82007392a22a33647f0a0
+# Source0-md5:	891c38cdbe0a30291ed4afe711a17e3b
 URL:		https://metacpan.org/release/DateTime-Format-Strptime
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.31
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-DateTime >= 1:1.00
-BuildRequires:	perl-DateTime-Locale >= 1.05
+BuildRequires:	perl-DateTime-Locale >= 1.23
 BuildRequires:	perl-DateTime-TimeZone >= 2.09
-BuildRequires:	perl-Package-DeprecationManager >= 0.15
 BuildRequires:	perl-Params-ValidationCompiler
 BuildRequires:	perl-Specio >= 0.33
 BuildRequires:	perl-Test-Fatal
@@ -36,7 +36,7 @@ BuildRequires:	perl-Try-Tiny
 BuildRequires:	perl-DateTime-Locale(with_locales:de;en-AU;en-GB;en-US;fr;fr-FR;ga;pt;zh)
 %endif
 Requires:	perl-DateTime >= 1.00
-Requires:	perl-DateTime-Locale >= 1.05
+Requires:	perl-DateTime-Locale >= 1.23
 Requires:	perl-DateTime-TimeZone >= 2.09
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
