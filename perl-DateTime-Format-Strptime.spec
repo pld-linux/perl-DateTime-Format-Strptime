@@ -9,13 +9,13 @@ Summary:	DateTime::Format::Strptime - Parse and format strp and strf time patter
 Summary(pl.UTF-8):	DateTime::Format::Strptime - analiza i formatowanie wzorców czasu strp i strf
 Name:		perl-DateTime-Format-Strptime
 # fill version to 4 decimal digits to avoid epoch bumps after 1.5000 (drop in >= 2.x if possible)
-%define	rver	1.77
+%define	rver	1.79
 Version:	%{rver}00
 Release:	1
 License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DateTime/DateTime-Format-Strptime-%{rver}.tar.gz
-# Source0-md5:	891c38cdbe0a30291ed4afe711a17e3b
+# Source0-md5:	441cfec62b0b8a1b4c05cbe5ef73fbf4
 URL:		https://metacpan.org/release/DateTime-Format-Strptime
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.31
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -23,7 +23,7 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-DateTime >= 1:1.00
-BuildRequires:	perl-DateTime-Locale >= 1.23
+BuildRequires:	perl-DateTime-Locale >= 1.30
 BuildRequires:	perl-DateTime-TimeZone >= 2.09
 BuildRequires:	perl-Params-ValidationCompiler
 BuildRequires:	perl-Specio >= 0.33
@@ -59,7 +59,7 @@ wzorzec, a zwraca powiązany obiekt DateTime.
 %if %{with tests} && %{without tests_i18n}
 %{__sed} -i -e "/^\[\(Australian\|UK\|French\)/,/^\[/ d" t/basic.t
 %{__sed} -i -e "/locale.*'pt'/ s/'pt'/'en-US'/" t/format-datetime.t
-%{__rm} t/format-with-locale.t t/locale-{de,ga,pt,zh}.t
+%{__rm} t/format-with-locale.t t/generated-locale-{de,ga,pt,zh}.t
 %endif
 
 %build
